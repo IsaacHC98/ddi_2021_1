@@ -13,7 +13,6 @@ public class Pelota : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("Hola mundo");
         rb = GetComponent<Rigidbody>();
     }
 

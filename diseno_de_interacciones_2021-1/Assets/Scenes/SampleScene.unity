@@ -143,6 +143,49 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &670187090
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 670187092}
+  - component: {fileID: 670187091}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &670187091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670187090}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2345ff7f716b8f74aa004bdbf4e7db08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &670187092
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670187090}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 14.540285, y: -6.262883, z: 27.50866}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &687565483
 GameObject:
   m_ObjectHideFlags: 0
@@ -425,7 +468,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618789026, guid: ae01337ca2c074b4c94792e2f194e1a3, type: 3}
       propertyPath: torque.y
-      value: 1
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 618789026, guid: ae01337ca2c074b4c94792e2f194e1a3, type: 3}
       propertyPath: direction.y
@@ -433,7 +476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 618789026, guid: ae01337ca2c074b4c94792e2f194e1a3, type: 3}
       propertyPath: direction.z
-      value: 20
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 618789026, guid: ae01337ca2c074b4c94792e2f194e1a3, type: 3}
       propertyPath: magnusScale
