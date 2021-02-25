@@ -31,7 +31,7 @@ public class Problem2 : MonoBehaviour
     {
         int respuesta = 0;
         ///Respuesta Correcta
-        respuesta = estaInscrito("hernandez Cano Isaac", lista);
+        respuesta = estaInscrito("Hernandez Cano Isaac", lista);
         ///Respuesta Incorrecta
         //respuesta = estaInscrito("Ricardo Renteria", lista);
         if(respuesta > -1){
