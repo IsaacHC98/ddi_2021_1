@@ -31,9 +31,9 @@ public class Problem2 : MonoBehaviour
     {
         int respuesta = 0;
         ///Respuesta Correcta
-        respuesta = estaInscrito("Hernandez Cano Isaac", lista);
+        //respuesta = estaInscrito("Hernandez Cano Isaac", lista);
         ///Respuesta Incorrecta
-        //respuesta = estaInscrito("Ricardo Renteria", lista);
+        respuesta = estaInscrito("Ricardo Renteria", lista);
         if(respuesta > -1){
             Debug.Log("El alumno esta inscrito");
         }else{

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7428574034039092723}
   - component: {fileID: 5224003545957561215}
   - component: {fileID: 618789026}
+  - component: {fileID: 618789031}
   m_Layer: 0
   m_Name: Pelota
   m_TagString: Untagged
@@ -106,5 +107,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bce52502b4a29d47a2ddedf73e3cf88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  direction: {x: 0, y: 0, z: 1}
-  speed: 3
+  direction: {x: 0, y: 10, z: 30}
+  torque: {x: 0, y: 0.5, z: 0}
+  speed: 70
+  magnusScale: 0.1
+--- !u!54 &618789031
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127000738256491368}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
