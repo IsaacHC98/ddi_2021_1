@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine;
 
 public class InventoryToggle : MonoBehaviour
@@ -15,7 +16,7 @@ public class InventoryToggle : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I)){
+        if(CrossPlatformInputManager.GetButtonDown("Inventory")){
             panel.SetActive(!panel.activeSelf);
         }   
     }

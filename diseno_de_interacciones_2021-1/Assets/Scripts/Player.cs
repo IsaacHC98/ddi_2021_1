@@ -7,11 +7,13 @@ public class Player : MonoBehaviour
     [SerializeField] private UI_Inventory uiInventory;
 
     private Inventory inventory;
+    public GameObject inventoryUI;
     // Start is called before the first frame update
 
     private void Start() {
         inventory = new Inventory(UseItem);
         uiInventory.SetInventory(inventory);
+        inventoryUI.SetActive(false);
     }
 
     private void UseItem(Item item){

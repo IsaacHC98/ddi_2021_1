@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine;
 
 public class Elevator : Interactable
@@ -24,11 +25,11 @@ public class Elevator : Interactable
     // Update is called once per frame
     public override void Update()
     {
-        if(platform.transform.position.y < 3 && isInsideZone && Input.GetKeyDown(interactionKey)){
+        if(platform.transform.position.y < 3 && isInsideZone && CrossPlatformInputManager.GetButtonDown(interactionButton)){
             states = EleStates.goUp;
         }
 
-        if(platform.transform.position.y > 3 && isInsideZone && Input.GetKeyDown(interactionKey)){
+        if(platform.transform.position.y > 3 && isInsideZone && CrossPlatformInputManager.GetButtonDown(interactionButton)){
             states = EleStates.goDown;
         }
 
