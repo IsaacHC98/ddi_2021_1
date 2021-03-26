@@ -36,4 +36,12 @@ public class Player : MonoBehaviour
             itemWorld.DestroySelf();
         }
     }
+
+    private void OnMouseDown(Collider other) {
+        ItemWorld itemWorld = other.GetComponent<ItemWorld>();
+        if(itemWorld != null){
+            inventory.AddItem(itemWorld.GetItem());
+            itemWorld.DestroySelf();
+        }
+    }
 }

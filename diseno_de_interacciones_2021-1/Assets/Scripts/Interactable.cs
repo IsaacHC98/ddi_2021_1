@@ -33,6 +33,10 @@ public class Interactable : MonoBehaviour
        isInsideZone = false;
    }
 
+   private void OnMouseDown() {
+       Interact();
+   }
+
     public virtual void Interact(){
 
     }
