@@ -11,7 +11,7 @@ public class Pelota : Interactable
     private Rigidbody rb;
     private float intensity;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody>();
     }

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityStandardAssets.CrossPlatformInput;
 using UnityEngine;
+using IBM.Watsson.Examples;
 
 public class Interactable : MonoBehaviour
 {
@@ -11,19 +12,31 @@ public class Interactable : MonoBehaviour
     public float gazeTimer = 0;
     //public KeyCode interactionKey = KeyCode.E;
     public string interactionButton = "Interact";
+    public string voiceCommand = "move";
+
+    void Start() {
+        VoiceCommandProcessor commandProcessor = GameObject.FindObjectOfType<VoiceCommandProcessor>();
+        commandProcessor.onVoiceCommandRecognized += OnVoiceCommandRecognized;
+    }
 
     public virtual void Update() {
         //if(isInsideZone && Input.GetKeyDown(interactionKey)){
         if(isInsideZone && CrossPlatformInputManager.GetButtonDown(interactionButton)){
             Interact();
         }
-        if(gazedAt){
-            ;
+        /*if(gazedAt){
             if((gazeTimer += Time.deltaTime) >= gazeInteractTime){
                 Interact();
                 gazedAt = false;
                 gazeTimer = 0;
             }
+        }*/
+    }
+
+    public void OnVoiceCommandRecognized(string command){
+        Debug.Log(command);
+        if(command.ToLower().Contains(voiceCommand.ToLower()) && gazedAt){
+            Interact();
         }
     }
 
